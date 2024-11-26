@@ -1,0 +1,76 @@
+/*main部の画面幅設定（block）*/
+.quiz__content {
+    margin: 0 auto;/*上下：オンライン、左右：自動調整*/
+    padding: 60px 15px;/*上下60px、左右15pxは余白とする*/
+    max-width: 1230px;/*幅のみ指定（高さは内容によって決定する）*/
+}
+
+/*出題の詳細設定（block）*/
+.question {
+    margin: 0 auto;/*上下：オンライン、左右：自動調整*/
+    padding: 10px 20px;/*上下10px、左右20pxは余白とする*/
+    width: 550px;
+    border-radius: 3px;
+    background: #000;
+}
+
+/*出題のtext設定（block）*/
+.question__text {
+    color: #fff;
+    text-align: left;/*文字・画像の水平方向を指定する（center：左配置）*/
+}
+
+/*選択肢の詳細設定（block）*/
+.quiz-form {
+    margin: 0 auto;/*上下：オンライン、左右：自動調整*/
+    padding-top: 20px;/*「出題」～「選択肢１」までの間隔*/
+    width: 550px;/*「.question」クラスの画面幅と揃えている*/
+    text-align: center;/*flexの水平方向を指定する（center：子要素を中央で揃える）*/
+}
+
+/*選択肢のmargin設定（block）*/
+.quiz-form__item {
+    margin-bottom: 30px;/*「選択肢４」～「回答ボタン」までの間隔*/
+}
+
+/*各選択肢１～４の見栄え設定（block）*/
+.quiz-form__group {
+    margin-bottom: 5px;/*「選択肢n」～「選択肢n+1」までの間隔*/
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/*各選択肢１～４のinput要素の設定（none：HTML上にない）*/
+.quiz-form__radio {
+    display: none;/*none:要素が取得されず、完全にその場にない扱い。今回の場合だと「type="radio"」で指定したラジオボタンがHTML上に書いていないもの（非表示とは違う）としてみなされる（※「visibility: hidden;」は非表示なのでこの違いを検証ツールで試せば違いが分かる）*/
+}
+
+/*各選択肢１～４クリック時の要素変更_:checked+label（none）*/
+.quiz-form__radio:checked+label {/*:checked（擬似クラス）：なんらかの要素を押して、動きをつけたりデザインを変更させたりする際に使用する。今回の場合だと「: checked+label」とあるので、同じグループ（div.quiz-form__radio）内のlabelタグに対し「background: #ddd」の変更を施している*/
+    background: #ddd;
+}
+
+/*各選択肢１～４の詳細設定（block）*/
+.quiz-form__label {
+    display: block;
+    padding: 20px;
+    width: 100%;/*「.quiz-form」クラスの画面幅に準ずる*/
+    cursor: pointer;/*マウスポインターが要素の上にいるときに表示されるマウスカーソルを設定する*/
+}
+
+/*回答ボタンのsize設定（block）*/
+.quiz-form__button {
+    width: 550px;/*「.question」クラスの画面幅と揃えている*/
+}
+
+/*回答ボタンの詳細設定（inline-block）*/
+.quiz-form__button-submit {
+    padding: 10px;
+    width: 100%;/*「quiz-form__button」クラスの画面幅に準ずる*/
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;/*マウスポインターが要素の上にいるときに表示されるマウスカーソルを設定する*/
+}

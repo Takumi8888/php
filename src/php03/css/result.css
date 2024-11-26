@@ -1,0 +1,52 @@
+/*main部の画面幅設定（block）*/
+.result__content {
+    margin: 0 auto;/*上下：オンライン、左右：自動調整*/
+    padding: 60px 15px;/*上下60px、左右15pxは余白とする*/
+    max-width: 1230px;/*幅のみ指定（高さは内容によって決定する）*/
+}
+
+/*合否判定（block）*/
+.result {
+    text-align: center;/*文字・画像の水平方向を指定する（center：中央配置）*/
+}
+
+/*正解時のtext設定（block）*/
+.result__text--correct {
+    color: #ff0000;
+}
+
+/*不正解時のtext設定（block）*/
+.result__text--incorrect {
+    color: #0000ff;
+}
+
+/*解説tableの外枠（block）*/
+.answer-table {/*「.answer-table」クラス以降は、table要素になるため、その前にblock要素を設ける必要がある*/
+    border: 1px solid #ddd;
+}
+
+/*解説tableの外枠（table）*/
+.answer-table__inner {
+    width: 100%;/*100%とは：「.result__content」クラスにて指定された「max-width: 1230px;」に対し「padding: 60px 15px;」となるため、今回の100%とはmax-width:1200pxという設定と同義である*/
+}
+
+/*解説tableの表頭に対する設定（table-cell）*/
+.answer-table__header {
+    padding: 15px;
+    width: 20%;/*「answer-table__inner」クラスのwidthに対し20%としている*/
+    border-bottom: 1px solid #ddd;
+    background-color: #eee;
+    font-weight: bold;
+}
+
+/*解説tableの回答内容に対する設定（table-cell）*/
+.answer-table__text {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*解説table最終行の表頭、回答内容に対する設定（table-cell）*/
+.answer-table__row:last-child .answer-table__header,
+.answer-table__row:last-child .answer-table__text {
+    border-bottom-width: 0;/*最終行の下線部を指定することで立体感を表現している*/
+}

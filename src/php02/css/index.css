@@ -1,0 +1,52 @@
+/*main部の画面幅設定（block）*/
+.search-form__content {
+    margin: 0 auto;/*上下：オンライン、左右：自動調整*/
+    padding: 60px 15px;/*上下60px、左右15pxは余白とする*/
+    max-width: 1230px;/*幅のみ指定（高さは内容によって決定する）*/
+}
+
+/*h2見出しの配置設定（block）*/
+.search-form__heading {
+    margin-bottom: 40px;/*「h2見出し」と「検索ボックス」までの間隔*/
+    text-align: center;/*文字・画像の水平方向を指定する（center：中央配置）*/
+}
+
+/*検索ボックスのflex設定*/
+.search-form {
+    display: flex;/*親要素にflexを指定することで子要素が横並びになる*/
+    justify-content: center;/*flexの水平方向を指定する（center：子要素を中央で揃える）*/
+}
+
+/*検索ボックスの幅設定（block）*/
+.search-form__item {
+    padding: 0 5px;
+    width: 300px;/*block要素で検索ボックスの幅を指定する*/
+}
+
+/*検索ボックスの詳細設定（inline-block）*/
+.search-form__item-select {
+    padding: 10px;
+    width: 100%;/*inline-block要素のため親要素（.search-form__item）に準ずる*/
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;/*セレクトボタンのデザインを無効化*/
+}
+
+/*検索ボタンの幅設定（block）*/
+.search-form__button {
+    padding: 0 5px;
+    width: 120px;/*block要素で検索ボックスの幅を指定する*/
+}
+
+/*検索ボタンの詳細設定（inline-block）*/
+.search-form__button-submit {
+    padding: 10px;
+    width: 100%;/*inline-block要素のため親要素（.search-form__button）に準ずる*/
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;/*マウスポインターが要素の上にいるときに表示されるマウスカーソルを設定する*/
+}

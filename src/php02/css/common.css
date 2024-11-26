@@ -1,0 +1,19 @@
+/* 背景色設定（block） */
+.header {
+    background: #000;
+}
+
+/* header部の画面幅設定（block） */
+.header__inner {
+    margin: 0 auto;/*上下：オンライン、左右：自動調整*/
+    padding: 20px 15px;/*上下20px、左右15pxは余白とする*/
+    max-width: 1230px;/*幅のみ指定（高さは内容によって決定する）*/
+}
+
+/* logo（World Clock）のフォント仕様設定（inline） */
+.header__logo {
+    color: #fff;
+    text-decoration: none;/*リンクの下線を消す*/
+    font-weight: bold;
+    font-size: 24px;
+}

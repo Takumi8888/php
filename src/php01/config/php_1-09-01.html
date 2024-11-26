@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php_1-09-01</title>
+</head>
+
+<body>
+    <form action="php_1-09-01.php" method="POST">
+    <!-- <form action="php_1-09-01.php" method="GET"> -->
+        <label>会社名：<input type="text" name="company"></label>
+        <br />
+        <input type="submit" name="submit" value="送信する" />
+    </form>
+</body>
+
+</html>
+
+<!-- 1. POST
+リンク：http://localhost/php01/config/php_1-09-01.html
+POSTの使用用途
+・サーバーに情報を投稿する
+・配列などの長いデータを送信する
+・ファイルのアップロードを行う
+
+2. GET
+リンク：http://localhost/php01/config/php_1-09-01.php?company=株式会社estra&submit=送信する
+GETの使用用途
+・サーバーから情報を取り出す -->
+

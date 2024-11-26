@@ -1,0 +1,17 @@
+ブラウザ上でphpの出力結果を確認する手順
+
+1. Docker Desktopを立ち上げる
+
+2. Ubuntsuを立ち上げる
+
+3. 下記コマンド入力
+　 ①cd ~/coachtech/php
+　 ②docker compose up -d
+
+4. php/src/php01内に保存されたphpファイルの名前に書きURLをブラウザに入力
+　ex：
+　保存先：~/php/src/php01
+　phpファイル名：index02.php
+　URL：http://localhost/php01/index02.php
+
+5. phpの出力結果をブラウザ上で表示できる
